@@ -1,0 +1,58 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>YWC21</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .gold { fill:var(--logo-gold); }
+  .bevel { fill:var(--gold-shadow); }
+  .slate { fill:var(--compass-slate); }
+  .sky { fill:var(--celestial-blue); }
+  .tint { fill:var(--parchment); }
+  [data-theme="parchment"] .tint { fill:var(--navy); }
+  .blk { rx:var(--radius-xs); }
+  .rule { fill:none; stroke:var(--navy); stroke-width:2; }
+  .words { position:absolute; left:var(--space-6); bottom:var(--space-6); max-width:440px; }
+  .name { margin:0; font-family:var(--font-latin-display); font-size:120px; line-height:.92; font-weight:700; letter-spacing:-.01em; color:var(--ink); }
+  .tag { margin:var(--space-2) 0 0 4px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      logo-gold 176x248 slab bled off the top (the mark's gold, the identity) · parchment 144x192 bled off the right (navy in the parchment theme) · compass-slate 112x128 · gold-shadow 112x48 · celestial-blue 48x16 once (the halo, light not paint)
+  arrangement one tall gold slab with satellites, bottoms on one line space-12 above the edge, space-4 gutters
+  pattern     literal motif: the zodiac ring of the logo, as a half-ring of two navy arcs with 30-degree segment ticks centred on the slab's corner, crossing slab and slate
+  scales      sides in space-4 multiples; gutters space-4; ring band space-6 wide (r 96 to 120); corners radius-xs
+-->
+<rect class="gold blk" x="24" y="-8" width="176" height="248" rx="2"/>
+<rect class="bevel blk" x="216" y="48" width="112" height="48" rx="2"/>
+<rect class="slate blk" x="216" y="112" width="112" height="128" rx="2"/>
+<rect class="tint blk" x="344" y="48" width="152" height="192" rx="2"/>
+<rect class="sky blk" x="24" y="256" width="48" height="16" rx="2"/>
+<path class="rule" d="M 104 240 A 96 96 0 0 1 296 240"/>
+<path class="rule" d="M 80 240 A 120 120 0 0 1 320 240"/>
+<line class="rule" x1="296.0" y1="240.0" x2="320.0" y2="240.0"/>
+<line class="rule" x1="283.1" y1="192.0" x2="303.9" y2="180.0"/>
+<line class="rule" x1="248.0" y1="156.9" x2="260.0" y2="136.1"/>
+<line class="rule" x1="200.0" y1="144.0" x2="200.0" y2="120.0"/>
+<line class="rule" x1="152.0" y1="156.9" x2="140.0" y2="136.1"/>
+<line class="rule" x1="116.9" y1="192.0" x2="96.1" y2="180.0"/>
+<line class="rule" x1="104.0" y1="240.0" x2="80.0" y2="240.0"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">YWC21</h1>
+<p class="tag">Re:Humanize the Web — Young Webmaster Camp ครั้งที่ 21</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* YWC21 — generated from tokens.json */
+:root, [data-theme="night"] {
+  --surface: #192851; /* Page ground. Night: the navy sky behind Hero → Timeline. Parchment: print, docs and light pages. */
+  --surface-deep: #0f1922; /* Deepest ground: the vignette at the emblem's centre, marquee band, footer. */
+  --surface-raised: #213263; /* Raised panels and demo cards on surface. Night value derived (not sampled). */
+  --ink: #e0d69a; /* Headings and display type (Thai + Latin) on surface, surface-deep and surface-raised — ≥9:1 in both themes. */
+  --ink-body: #dfe4f2; /* Body paragraphs on surface and surface-raised (≥9.7:1). */
+  --ink-muted: #b9c2d9; /* Captions, metadata and descriptions on surface and surface-raised (≥5.4:1). */
+  --line: rgba(224, 214, 154, 0.35); /* Decorative hairlines and card outlines only — never the sole border of a control. */
+  --accent: #f0d590; /* Primary action fill (Button primary), selected MajorTile ring, active DiamondDots. */
+  --on-accent: #192851; /* Text and icons on accent (≈10:1 in both themes). */
+  --focus: #fef0ba; /* Solid 2px focus ring, offset 2px; ≥9:1 on every surface. */
+  --navy: #192851; /* Brand navy (sampled from the site). Night sky ground; ink on parchment. */
+  --navy-ink: #0f1922; /* Darkest navy (sampled), vignettes and glow cores. */
+  --champagne: #e0d69a; /* Champagne gold (sampled): all heading text on navy. */
+  --gold-solid: #f0d590; /* Solid gold (sampled): the bright end of the MajorTile gradient, tracked labels. */
+  --logo-gold: #f6e18b; /* Main fill of the logo's W, 21 and zodiac ring (sampled from the logo PNG). */
+  --gold-highlight: #fef0ba; /* Specular highlight on the logo's gold bevel; the brightest gold. */
+  --gold-shadow: #a29459; /* Shaded side of the logo's gold bevel. Decorative only — 4.7:1 on navy, not for body text. */
+  --compass-slate: #415d67; /* Stroke of the compass-star inside the logo ring. Decorative line colour; 4.5:1 on parchment. */
+  --celestial-blue: #4686d2; /* The blue halo behind the glow logo. Glow and atmosphere only (3.8:1 on navy — never text). */
+  --parchment: #e6cb9c; /* Parchment (sampled): torn-edge cards, the Timeline box, map/cloud shapes. */
+  --white: #ffffff; /* Decorative circles in the YWC21 intro section. */
+  --placeholder-gray: #464646; /* Builder placeholder in the unfinished sections (Location, Q&A, Sponsors, Footer). NOT a design colour — do not ship. */
+  --media-gray: #cacaca; /* Empty image slot in Gallery before real photos. Placeholder only. */
+  --glow-gold: 0 0 26px 4px rgba(224, 214, 154, 0.35); /* Emblem ring and hovered gold elements on navy. */
+  --glow-celestial: 0 0 64px 16px rgba(70, 134, 210, 0.45); /* The blue halo behind the hero logo. */
+  --drop-parchment: 0 10px 18px rgba(20, 14, 8, 0.5); /* Under torn-edge ParchmentCards. */
+}
+[data-theme="parchment"] {
+  --surface: #e6cb9c;
+  --surface-deep: #d9b983;
+  --surface-raised: #f1dfbb;
+  --ink: #192851;
+  --ink-body: #2b2418;
+  --ink-muted: #5a4a2e;
+  --line: rgba(25, 40, 81, 0.3);
+  --accent: #192851;
+  --on-accent: #e0d69a;
+  --focus: #192851;
+}
+:root {
+  --space-1: 4px; /* Icon-to-text gap, dot gaps. */
+  --space-2: 8px; /* Heading → English label (tight). */
+  --space-3: 12px; /* Inside tags and small controls. */
+  --space-4: 16px; /* Mobile page gutter; card inner padding. */
+  --space-6: 24px; /* Card padding; gap between parchment cards on mobile. */
+  --space-8: 32px; /* Section heading → content. */
+  --space-12: 48px; /* Gap between cards on desktop (≈⅓ card width). */
+  --space-22: 88px; /* Section rhythm — the generous breath between sections. */
+  --radius-xs: 2px; /* MajorTile, media slots — the site is nearly square. */
+  --radius-sm: 4px; /* Buttons, callouts, inputs. */
+  --radius-md: 6px; /* Panels on surface-raised. */
+  --radius-full: 9999px; /* Emblem discs and round badges. */
+  --font-wordmark: "Oswald", "Arial Narrow", sans-serif;
+  --font-latin-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-thai-display: "Chonburi", "Trirong", serif;
+  --font-sans: "Prompt", "Noto Sans Thai", system-ui, sans-serif;
+  --text-hero-th: 400 48px/60px var(--font-thai-display); /* Hero line and page titles, Thai. Colour ink. */
+  --text-section-th: 400 28px/40px var(--font-thai-display); /* Every section title (ทำไมต้อง YWC21, ภาพกิจกรรม, สาขาในค่าย, Timeline). */
+  --text-card-th: 400 20px/30px var(--font-thai-display); /* Titles inside ParchmentCard and MajorTile. */
+  --text-numeral: 700 64px/64px var(--font-latin-display); /* “YWC 21”, the number 21, big stats and dates. */
+  --text-wordmark: 600 20px/22px var(--font-wordmark); /* The camp name in caps when set as text beside the mark. */
+  --text-label: 600 12px/16px var(--font-sans); /* Uppercase English label under a Thai title. Colour gold-solid on night. */
+  --text-body-lg: 400 18px/30px var(--font-sans); /* Intro paragraphs. */
+  --text-body: 400 16px/26px var(--font-sans); /* Default body, Thai and English mixed. Colour ink-body. */
+  --text-caption: 400 13px/20px var(--font-sans); /* Captions and metadata. Colour ink-muted. */
+  --text-button: 600 16px/24px var(--font-sans); /* Button labels. */
+}
+.hero-th {
+  font-family: var(--font-thai-display);
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.section-th {
+  font-family: var(--font-thai-display);
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.card-th {
+  font-family: var(--font-thai-display);
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.numeral {
+  font-family: var(--font-latin-display);
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.wordmark {
+  font-family: var(--font-wordmark);
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.button {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+}

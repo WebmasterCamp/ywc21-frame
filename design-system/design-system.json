@@ -1,0 +1,222 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "Illustrations": {
+      "files": {
+        "astrology-zodiac-wheel-chart.png": {
+          "blob": "3b6d8bc05231ee4d91718f07f299b3fa",
+          "name": "astrology-zodiac-wheel-chart.png",
+          "sha256": "335b32e015d42f1817073f2eba8db6ac6de1eed6c5a80ccffb5e04bbb6b5aa1f",
+          "size": 57981,
+          "type": "image/png"
+        },
+        "blank-torn-parchment-frame.png": {
+          "blob": "07b2095a8755577aeab963dd3e7e2260",
+          "name": "blank-torn-parchment-frame.png",
+          "sha256": "a627d92ec6facd9508780f061f999e8fed10928606e66e71402026962687c968",
+          "size": 26673,
+          "type": "image/png"
+        },
+        "blue-glowing-reaching-hand.png": {
+          "blob": "462458a503a5db3aec8a047593c51724",
+          "name": "blue-glowing-reaching-hand.png",
+          "sha256": "c10cfdbcc2193d5b336b72733b1ab835d77abc54c4fc66b3b76080d2ade9995c",
+          "size": 1189582,
+          "type": "image/png"
+        },
+        "blue-wave-gradient-bottom-right.png": {
+          "blob": "e2f29e3aec4cb977509e2a5a4d84d998",
+          "name": "blue-wave-gradient-bottom-right.png",
+          "sha256": "80ef5a845bd4f60bb75a3702d7bfb2e141ab93301d95a77654cd2f1504b95c1a",
+          "size": 217302,
+          "type": "image/png"
+        },
+        "blue-wave-gradient-double-peak.png": {
+          "blob": "a829cba62cdd235dfdeaa3b57690a50d",
+          "name": "blue-wave-gradient-double-peak.png",
+          "sha256": "6ddcfcba0e4641341a33e3f708d07162126ce9431be2df98fa072195f367e791",
+          "size": 371500,
+          "type": "image/png"
+        },
+        "gold-decorative-glyphs-and-wheel.png": {
+          "blob": "ef019818f96cb7bbc47716e6e61c1198",
+          "name": "gold-decorative-glyphs-and-wheel.png",
+          "sha256": "55607a4adb247d1403e86ef7a0b6deb0900f92222247a7b16ef9835ddc85895b",
+          "size": 1126136,
+          "type": "image/png"
+        },
+        "gray-blue-wave-gradient-inverted.png": {
+          "blob": "ba2f41f1ccafeb508c21905fc633abc8",
+          "name": "gray-blue-wave-gradient-inverted.png",
+          "sha256": "c51ae379562f03210df26d173eef1b77814855e8cf4ebb14c727db4cc59c8602",
+          "size": 250712,
+          "type": "image/png"
+        },
+        "human-word-multilingual-text.png": {
+          "blob": "de9993660a65f028e2696b0ff7440523",
+          "name": "human-word-multilingual-text.png",
+          "sha256": "2b19005f685604170c9569b626e208444152428270739018f2f859d431e3ce48",
+          "size": 150213,
+          "type": "image/png"
+        },
+        "pointing-hand-illustration.png": {
+          "blob": "43b06d8c2d4a8a1187b41e13ad319b37",
+          "name": "pointing-hand-illustration.png",
+          "sha256": "ea36f241ad37a5d06630c42c50a407c869aea814c614ebf76e461eb54cee448c",
+          "size": 159369,
+          "type": "image/png"
+        },
+        "sailing-ship-icon.png": {
+          "blob": "85f057b0eb8f29711eaddf94b4bd0588",
+          "name": "sailing-ship-icon.png",
+          "sha256": "5aeaa575c350f5a010d946cac25ce3edaad968499606a6e724b6f26959fe231b",
+          "size": 32683,
+          "type": "image/png"
+        },
+        "torn-map-piece-01.png": {
+          "blob": "2b17431ecf62c2afddf122c8e3cc8513",
+          "name": "torn-map-piece-01.png",
+          "sha256": "b1bc96860bc5e76a9fe4f55a592f335d1f98c27ff42fcf835548f33cf2983b53",
+          "size": 2655,
+          "type": "image/png"
+        },
+        "torn-map-piece-02.png": {
+          "blob": "e719cabb52228906c2b20f321577fc3a",
+          "name": "torn-map-piece-02.png",
+          "sha256": "bce0ffc0da3dbd107696212bbdee3eb92aaead1595b8c7e73259ae30ca9681ac",
+          "size": 1543,
+          "type": "image/png"
+        },
+        "torn-map-piece-03.png": {
+          "blob": "16ca89af26350370630e4feefe8fd002",
+          "name": "torn-map-piece-03.png",
+          "sha256": "b049ee1c65c9f1baa1ed246f0fdcb7b24f0210ad32b43ae25e22bafb3c9a5ae6",
+          "size": 3467,
+          "type": "image/png"
+        },
+        "torn-map-piece-04.png": {
+          "blob": "7628162e06a06d7c44320df9dced9aa6",
+          "name": "torn-map-piece-04.png",
+          "sha256": "395cb292a613fd1a994b53db349bccfdc338a9211d2739b1c2977def78bd621a",
+          "size": 2102,
+          "type": "image/png"
+        },
+        "torn-map-piece-05.png": {
+          "blob": "892be8c3b39328e99000100b4e2cc368",
+          "name": "torn-map-piece-05.png",
+          "sha256": "3296fc1ca8e702a2763d43ebb1bbf67f102dcdc60a2c399caee81842bcd9abc4",
+          "size": 3527,
+          "type": "image/png"
+        },
+        "torn-map-piece-06.png": {
+          "blob": "93d6598891ffe99284c9a3390e643df1",
+          "name": "torn-map-piece-06.png",
+          "sha256": "a002a1b115dca1f6d6116d8fd3d2d2f22c496b802b51db16ae5683befbd3904e",
+          "size": 2570,
+          "type": "image/png"
+        },
+        "torn-map-piece-07.png": {
+          "blob": "517acc4315e8679977cda6249cd7f68a",
+          "name": "torn-map-piece-07.png",
+          "sha256": "ed4d3961e222272bb25bacb33fbed6e762145835c1015751a2f823101e6f2078",
+          "size": 2287,
+          "type": "image/png"
+        },
+        "torn-map-piece-08.png": {
+          "blob": "05137f2eeadc326a76eb2f7d80a03aca",
+          "name": "torn-map-piece-08.png",
+          "sha256": "b4abcc33af95bdff8f4273aa5191e225fec00e1cb8177a4dbd5b272ad193b47f",
+          "size": 3449,
+          "type": "image/png"
+        },
+        "torn-map-piece-09.png": {
+          "blob": "36eb4d07b7da704d0cf6913e906c1d99",
+          "name": "torn-map-piece-09.png",
+          "sha256": "6ee9550c4eb8ec5ac455646b90cae4c7f3915236dc0ad80c6fdf10b4a7b74d3f",
+          "size": 2034,
+          "type": "image/png"
+        },
+        "torn-map-piece-single.png": {
+          "blob": "a73095b386c8a48ac60f73e212b9df7b",
+          "name": "torn-map-piece-single.png",
+          "sha256": "68b559175619fdc7be516cd06b7044eb63acfc1a74e9683443d1f8180fef32e3",
+          "size": 6583,
+          "type": "image/png"
+        },
+        "torn-parchment-map-pieces.png": {
+          "blob": "974787239365ef80a04c98ef83bc9c4e",
+          "name": "torn-parchment-map-pieces.png",
+          "sha256": "bc4b0b202c6f079ac7a7676838ef9575c090f298a0dfcc4b94835a5b055b11e1",
+          "size": 743427,
+          "type": "image/png"
+        },
+        "white-gray-top-gradient.png": {
+          "blob": "2b797d6b26f957fa8af537826929c173",
+          "name": "white-gray-top-gradient.png",
+          "sha256": "3d5b27dffbfbbc57629b5814931fa6fe7cb27e77ea994775bcdc69643e5bbb0b",
+          "size": 389339,
+          "type": "image/png"
+        }
+      },
+      "name": "Illustrations",
+      "order": []
+    },
+    "Logos": {
+      "files": {
+        "ywc21-logo-compass.png": {
+          "blob": "a21ce12b14bf7b7474fba21248ab04d6",
+          "name": "ywc21-logo-compass.png",
+          "size": 73276,
+          "type": "image/png"
+        },
+        "ywc21-logo-glow.png": {
+          "blob": "1a684934d0faab2ae0b0a2f1eab58c75",
+          "name": "ywc21-logo-glow.png",
+          "size": 1975731,
+          "type": "image/png"
+        }
+      },
+      "name": "Logos",
+      "order": [
+        "ywc21-logo-glow.png",
+        "ywc21-logo-compass.png"
+      ],
+      "tile": "l"
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-09-25T15:43:00Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "groups": [
+    "Logos",
+    "Illustrations"
+  ],
+  "lastChange": {
+    "at": "2026-09-25T15:43:00Z",
+    "by": "Kanon",
+    "note": "Initial YWC21 system from the logo files and the site extraction",
+    "via": "Cowork"
+  },
+  "layout": "files",
+  "libraries": [
+    {
+      "global": "React",
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "global": "ReactDOM",
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "namespace": "YWC21",
+  "sections": {},
+  "title": "YWC21"
+}

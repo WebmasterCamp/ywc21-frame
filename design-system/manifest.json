@@ -1,0 +1,412 @@
+{
+  "manifestVersion": 3,
+  "name": "YWC21",
+  "namespace": "YWC21",
+  "files": [
+    "assets/Logos/README.md",
+    "components/Button/README.md",
+    "components/DiamondDots/README.md",
+    "components/MajorTile/README.md",
+    "components/ParchmentCard/README.md",
+    "components/ScriptMarquee/README.md",
+    "components/SectionHeading/README.md",
+    "components/bundle.css",
+    "components/bundle.js",
+    "components/index.d.ts",
+    "tokens.css"
+  ],
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18",
+      "global": "React"
+    },
+    {
+      "name": "react-dom",
+      "version": "18",
+      "global": "ReactDOM"
+    }
+  ],
+  "components": [
+    {
+      "name": "SectionHeading",
+      "group": "Layout",
+      "summary": "Centred Thai section title with a small tracked English label beneath — the heading of every section on the site."
+    },
+    {
+      "name": "Button",
+      "group": "Actions",
+      "summary": "Call-to-action button — an intentional addition: the Figma source has no button yet, but the site needs \"สมัครเลย\" and secondary links."
+    },
+    {
+      "name": "ParchmentCard",
+      "group": "Content",
+      "summary": "Torn-edge parchment card — used for the four \"ทำไมต้อง YWC21\" reasons and the Timeline entries."
+    },
+    {
+      "name": "MajorTile",
+      "group": "Content",
+      "summary": "Tall navy-to-gold gradient tile for choosing one of the four camp majors (Content, Marketing, Programming, Design)."
+    },
+    {
+      "name": "ScriptMarquee",
+      "group": "Decoration",
+      "summary": "Band of the word \"human\" written in many scripts, drifting slowly — the visual shorthand for Re:Humanize the Web."
+    },
+    {
+      "name": "DiamondDots",
+      "group": "Navigation",
+      "summary": "Diamond-shaped indicator for the Gallery carousel."
+    }
+  ],
+  "assetGroups": [
+    {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "ywc21-logo-glow.png",
+        "ywc21-logo-compass.png"
+      ],
+      "files": [
+        {
+          "path": "assets/Logos/ywc21-logo-glow.png",
+          "id": "1a684934d0faab2ae0b0a2f1eab58c75"
+        },
+        {
+          "path": "assets/Logos/ywc21-logo-compass.png",
+          "id": "a21ce12b14bf7b7474fba21248ab04d6"
+        }
+      ]
+    },
+    {
+      "name": "Illustrations",
+      "files": [
+        {
+          "path": "assets/Illustrations/astrology-zodiac-wheel-chart.png",
+          "id": "3b6d8bc05231ee4d91718f07f299b3fa"
+        },
+        {
+          "path": "assets/Illustrations/blank-torn-parchment-frame.png",
+          "id": "07b2095a8755577aeab963dd3e7e2260"
+        },
+        {
+          "path": "assets/Illustrations/blue-glowing-reaching-hand.png",
+          "id": "462458a503a5db3aec8a047593c51724"
+        },
+        {
+          "path": "assets/Illustrations/blue-wave-gradient-bottom-right.png",
+          "id": "e2f29e3aec4cb977509e2a5a4d84d998"
+        },
+        {
+          "path": "assets/Illustrations/blue-wave-gradient-double-peak.png",
+          "id": "a829cba62cdd235dfdeaa3b57690a50d"
+        },
+        {
+          "path": "assets/Illustrations/gold-decorative-glyphs-and-wheel.png",
+          "id": "ef019818f96cb7bbc47716e6e61c1198"
+        },
+        {
+          "path": "assets/Illustrations/gray-blue-wave-gradient-inverted.png",
+          "id": "ba2f41f1ccafeb508c21905fc633abc8"
+        },
+        {
+          "path": "assets/Illustrations/human-word-multilingual-text.png",
+          "id": "de9993660a65f028e2696b0ff7440523"
+        },
+        {
+          "path": "assets/Illustrations/pointing-hand-illustration.png",
+          "id": "43b06d8c2d4a8a1187b41e13ad319b37"
+        },
+        {
+          "path": "assets/Illustrations/sailing-ship-icon.png",
+          "id": "85f057b0eb8f29711eaddf94b4bd0588"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-01.png",
+          "id": "2b17431ecf62c2afddf122c8e3cc8513"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-02.png",
+          "id": "e719cabb52228906c2b20f321577fc3a"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-03.png",
+          "id": "16ca89af26350370630e4feefe8fd002"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-04.png",
+          "id": "7628162e06a06d7c44320df9dced9aa6"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-05.png",
+          "id": "892be8c3b39328e99000100b4e2cc368"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-06.png",
+          "id": "93d6598891ffe99284c9a3390e643df1"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-07.png",
+          "id": "517acc4315e8679977cda6249cd7f68a"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-08.png",
+          "id": "05137f2eeadc326a76eb2f7d80a03aca"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-09.png",
+          "id": "36eb4d07b7da704d0cf6913e906c1d99"
+        },
+        {
+          "path": "assets/Illustrations/torn-map-piece-single.png",
+          "id": "a73095b386c8a48ac60f73e212b9df7b"
+        },
+        {
+          "path": "assets/Illustrations/torn-parchment-map-pieces.png",
+          "id": "974787239365ef80a04c98ef83bc9c4e"
+        },
+        {
+          "path": "assets/Illustrations/white-gray-top-gradient.png",
+          "id": "2b797d6b26f957fa8af537826929c173"
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "files": {
+      "assets/Illustrations/astrology-zodiac-wheel-chart.png": {
+        "store": "blob",
+        "id": "3b6d8bc05231ee4d91718f07f299b3fa",
+        "sha256": "335b32e015d42f1817073f2eba8db6ac6de1eed6c5a80ccffb5e04bbb6b5aa1f",
+        "bytes": 57981,
+        "type": "image/png",
+        "name": "astrology-zodiac-wheel-chart.png",
+        "addedAt": "2026-09-27T20:08:07.785Z",
+        "via": "page"
+      },
+      "assets/Illustrations/blank-torn-parchment-frame.png": {
+        "store": "blob",
+        "id": "07b2095a8755577aeab963dd3e7e2260",
+        "sha256": "a627d92ec6facd9508780f061f999e8fed10928606e66e71402026962687c968",
+        "bytes": 26673,
+        "type": "image/png",
+        "name": "blank-torn-parchment-frame.png",
+        "addedAt": "2026-09-27T20:08:08.654Z",
+        "via": "page"
+      },
+      "assets/Illustrations/blue-glowing-reaching-hand.png": {
+        "store": "blob",
+        "id": "462458a503a5db3aec8a047593c51724",
+        "sha256": "c10cfdbcc2193d5b336b72733b1ab835d77abc54c4fc66b3b76080d2ade9995c",
+        "bytes": 1189582,
+        "type": "image/png",
+        "name": "blue-glowing-reaching-hand.png",
+        "addedAt": "2026-09-27T20:08:10.516Z",
+        "via": "page"
+      },
+      "assets/Illustrations/blue-wave-gradient-bottom-right.png": {
+        "store": "blob",
+        "id": "e2f29e3aec4cb977509e2a5a4d84d998",
+        "sha256": "80ef5a845bd4f60bb75a3702d7bfb2e141ab93301d95a77654cd2f1504b95c1a",
+        "bytes": 217302,
+        "type": "image/png",
+        "name": "blue-wave-gradient-bottom-right.png",
+        "addedAt": "2026-09-27T20:08:11.482Z",
+        "via": "page"
+      },
+      "assets/Illustrations/blue-wave-gradient-double-peak.png": {
+        "store": "blob",
+        "id": "a829cba62cdd235dfdeaa3b57690a50d",
+        "sha256": "6ddcfcba0e4641341a33e3f708d07162126ce9431be2df98fa072195f367e791",
+        "bytes": 371500,
+        "type": "image/png",
+        "name": "blue-wave-gradient-double-peak.png",
+        "addedAt": "2026-09-27T20:08:13.768Z",
+        "via": "page"
+      },
+      "assets/Illustrations/gold-decorative-glyphs-and-wheel.png": {
+        "store": "blob",
+        "id": "ef019818f96cb7bbc47716e6e61c1198",
+        "sha256": "55607a4adb247d1403e86ef7a0b6deb0900f92222247a7b16ef9835ddc85895b",
+        "bytes": 1126136,
+        "type": "image/png",
+        "name": "gold-decorative-glyphs-and-wheel.png",
+        "addedAt": "2026-09-27T20:08:15.573Z",
+        "via": "page"
+      },
+      "assets/Illustrations/gray-blue-wave-gradient-inverted.png": {
+        "store": "blob",
+        "id": "ba2f41f1ccafeb508c21905fc633abc8",
+        "sha256": "c51ae379562f03210df26d173eef1b77814855e8cf4ebb14c727db4cc59c8602",
+        "bytes": 250712,
+        "type": "image/png",
+        "name": "gray-blue-wave-gradient-inverted.png",
+        "addedAt": "2026-09-27T20:08:17.011Z",
+        "via": "page"
+      },
+      "assets/Illustrations/human-word-multilingual-text.png": {
+        "store": "blob",
+        "id": "de9993660a65f028e2696b0ff7440523",
+        "sha256": "2b19005f685604170c9569b626e208444152428270739018f2f859d431e3ce48",
+        "bytes": 150213,
+        "type": "image/png",
+        "name": "human-word-multilingual-text.png",
+        "addedAt": "2026-09-27T20:08:17.978Z",
+        "via": "page"
+      },
+      "assets/Illustrations/pointing-hand-illustration.png": {
+        "store": "blob",
+        "id": "43b06d8c2d4a8a1187b41e13ad319b37",
+        "sha256": "ea36f241ad37a5d06630c42c50a407c869aea814c614ebf76e461eb54cee448c",
+        "bytes": 159369,
+        "type": "image/png",
+        "name": "pointing-hand-illustration.png",
+        "addedAt": "2026-09-27T20:08:18.899Z",
+        "via": "page"
+      },
+      "assets/Illustrations/sailing-ship-icon.png": {
+        "store": "blob",
+        "id": "85f057b0eb8f29711eaddf94b4bd0588",
+        "sha256": "5aeaa575c350f5a010d946cac25ce3edaad968499606a6e724b6f26959fe231b",
+        "bytes": 32683,
+        "type": "image/png",
+        "name": "sailing-ship-icon.png",
+        "addedAt": "2026-09-27T20:08:19.962Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-01.png": {
+        "store": "blob",
+        "id": "2b17431ecf62c2afddf122c8e3cc8513",
+        "sha256": "b1bc96860bc5e76a9fe4f55a592f335d1f98c27ff42fcf835548f33cf2983b53",
+        "bytes": 2655,
+        "type": "image/png",
+        "name": "torn-map-piece-01.png",
+        "addedAt": "2026-09-27T20:08:20.710Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-02.png": {
+        "store": "blob",
+        "id": "e719cabb52228906c2b20f321577fc3a",
+        "sha256": "bce0ffc0da3dbd107696212bbdee3eb92aaead1595b8c7e73259ae30ca9681ac",
+        "bytes": 1543,
+        "type": "image/png",
+        "name": "torn-map-piece-02.png",
+        "addedAt": "2026-09-27T20:08:21.525Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-03.png": {
+        "store": "blob",
+        "id": "16ca89af26350370630e4feefe8fd002",
+        "sha256": "b049ee1c65c9f1baa1ed246f0fdcb7b24f0210ad32b43ae25e22bafb3c9a5ae6",
+        "bytes": 3467,
+        "type": "image/png",
+        "name": "torn-map-piece-03.png",
+        "addedAt": "2026-09-27T20:08:22.464Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-04.png": {
+        "store": "blob",
+        "id": "7628162e06a06d7c44320df9dced9aa6",
+        "sha256": "395cb292a613fd1a994b53db349bccfdc338a9211d2739b1c2977def78bd621a",
+        "bytes": 2102,
+        "type": "image/png",
+        "name": "torn-map-piece-04.png",
+        "addedAt": "2026-09-27T20:08:23.432Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-05.png": {
+        "store": "blob",
+        "id": "892be8c3b39328e99000100b4e2cc368",
+        "sha256": "3296fc1ca8e702a2763d43ebb1bbf67f102dcdc60a2c399caee81842bcd9abc4",
+        "bytes": 3527,
+        "type": "image/png",
+        "name": "torn-map-piece-05.png",
+        "addedAt": "2026-09-27T20:08:24.343Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-06.png": {
+        "store": "blob",
+        "id": "93d6598891ffe99284c9a3390e643df1",
+        "sha256": "a002a1b115dca1f6d6116d8fd3d2d2f22c496b802b51db16ae5683befbd3904e",
+        "bytes": 2570,
+        "type": "image/png",
+        "name": "torn-map-piece-06.png",
+        "addedAt": "2026-09-27T20:08:25.186Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-07.png": {
+        "store": "blob",
+        "id": "517acc4315e8679977cda6249cd7f68a",
+        "sha256": "ed4d3961e222272bb25bacb33fbed6e762145835c1015751a2f823101e6f2078",
+        "bytes": 2287,
+        "type": "image/png",
+        "name": "torn-map-piece-07.png",
+        "addedAt": "2026-09-27T20:08:25.998Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-08.png": {
+        "store": "blob",
+        "id": "05137f2eeadc326a76eb2f7d80a03aca",
+        "sha256": "b4abcc33af95bdff8f4273aa5191e225fec00e1cb8177a4dbd5b272ad193b47f",
+        "bytes": 3449,
+        "type": "image/png",
+        "name": "torn-map-piece-08.png",
+        "addedAt": "2026-09-27T20:08:26.773Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-09.png": {
+        "store": "blob",
+        "id": "36eb4d07b7da704d0cf6913e906c1d99",
+        "sha256": "6ee9550c4eb8ec5ac455646b90cae4c7f3915236dc0ad80c6fdf10b4a7b74d3f",
+        "bytes": 2034,
+        "type": "image/png",
+        "name": "torn-map-piece-09.png",
+        "addedAt": "2026-09-27T20:08:27.542Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-map-piece-single.png": {
+        "store": "blob",
+        "id": "a73095b386c8a48ac60f73e212b9df7b",
+        "sha256": "68b559175619fdc7be516cd06b7044eb63acfc1a74e9683443d1f8180fef32e3",
+        "bytes": 6583,
+        "type": "image/png",
+        "name": "torn-map-piece-single.png",
+        "addedAt": "2026-09-27T20:08:28.338Z",
+        "via": "page"
+      },
+      "assets/Illustrations/torn-parchment-map-pieces.png": {
+        "store": "blob",
+        "id": "974787239365ef80a04c98ef83bc9c4e",
+        "sha256": "bc4b0b202c6f079ac7a7676838ef9575c090f298a0dfcc4b94835a5b055b11e1",
+        "bytes": 743427,
+        "type": "image/png",
+        "name": "torn-parchment-map-pieces.png",
+        "addedAt": "2026-09-27T20:08:30.076Z",
+        "via": "page"
+      },
+      "assets/Illustrations/white-gray-top-gradient.png": {
+        "store": "blob",
+        "id": "2b797d6b26f957fa8af537826929c173",
+        "sha256": "3d5b27dffbfbbc57629b5814931fa6fe7cb27e77ea994775bcdc69643e5bbb0b",
+        "bytes": 389339,
+        "type": "image/png",
+        "name": "white-gray-top-gradient.png",
+        "addedAt": "2026-09-27T20:08:31.153Z",
+        "via": "page"
+      },
+      "assets/Logos/ywc21-logo-compass.png": {
+        "store": "blob",
+        "id": "a21ce12b14bf7b7474fba21248ab04d6",
+        "bytes": 73276,
+        "type": "image/png"
+      },
+      "assets/Logos/ywc21-logo-glow.png": {
+        "store": "blob",
+        "id": "1a684934d0faab2ae0b0a2f1eab58c75",
+        "bytes": 1975731,
+        "type": "image/png"
+      }
+    },
+    "blobBytesUsed": 6794141
+  }
+}

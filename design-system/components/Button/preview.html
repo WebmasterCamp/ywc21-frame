@@ -1,0 +1,12 @@
+<!-- @dsCard group="Actions" height=88 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Button — preview</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var Y = window.YWC21, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{style:{display:'flex',gap:16,padding:16,flexWrap:'wrap'}},h(Y.Button,null,'สมัครเลย'),h(Y.Button,{variant:'ghost'},'ดูรายละเอียด'),h(Y.Button,{disabled:true},'ปิดรับสมัคร')));
+</script>
+</body>
+</html>

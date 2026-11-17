@@ -28,3 +28,10 @@ pnpm dev
 
 The dev server will be running at [http://localhost:5173](http://localhost:5173)
 
+
+# Design System
+
+The YWC21 design system (tokens, components and brand guidelines) lives in [`design-system/`](design-system/README.md).
+
+- Colours, type, spacing: [`design-system/api/tokens.md`](design-system/api/tokens.md) and [`design-system/tokens.css`](design-system/tokens.css)
+- Components: [`design-system/api/components/`](design-system/api/components/)
