@@ -17,7 +17,7 @@
 	let zoom = 1;
 	let files: FileList;
 	let pixelCrop = { x: 0, y: 0, width: 0, height: 0 };
-	let branch: Branch = Branch.YWC1;
+	let branch: Branch = Branch.PROGRAMMING;
 	let removeBg = false;
 	let removeBGStatus = false;
 	let enableRemoveBg = false;
@@ -138,7 +138,7 @@
 					alt="Cropped profile"
 					width="400"
 					height="400"
-					class="rounded-lg shadow-lg aspect-square w-auto max-h-[360px]"
+					class="rounded-full aspect-square w-auto max-h-[360px] drop-shadow-[0_0_24px_rgba(233,196,106,0.25)]"
 				/>
 
 				<div
@@ -151,7 +151,7 @@
 			{#if enableRemoveBg}
 				<label class="flex w-full items-center gap-3 cursor-pointer select-none">
 					<div class="flex flex-col gap-2">
-						<span class="text-sm text-white">Remove Background</span>
+						<span class="text-sm text-[#e9c46a]">Remove Background</span>
 						<div class="flex items-center justify-between gap-2 w-full">
 							<div class="relative">
 								<input
@@ -161,7 +161,7 @@
 									class="sr-only peer"
 								/>
 								<div
-									class="w-14 h-8 bg-gray-500 peer-checked:bg-pink-500 transition-colors duration-300"
+									class="w-14 h-8 bg-[#1e3a8a] peer-checked:bg-[#c9a24b] transition-colors duration-300"
 								/>
 								<div
 									class="absolute left-1 top-1 w-6 h-6 bg-white transition-transform duration-300 peer-checked:translate-x-5"
@@ -176,33 +176,16 @@
 			{/if}
 			<div class="flex w-full flex-col gap-2">
 				<div class="flex gap-2 flex-col w-full">
-					<span class="text-sm text-white">Template</span>
-					<select bind:value={branch} on:change={changeBranch} class="w-full p-4 rounded-lg">
-						<option value="YWC1">YWC1</option>
-						<option value="YWC2">YWC2</option>
-						<option value="YWC3">YWC3</option>
-						<option value="YWC4">YWC4</option>
-						<option value="YWC5">YWC5</option>
-						<option value="YWC6">YWC6</option>
-						<option value="YWC7">YWC7</option>
-						<option value="YWC8">YWC8</option>
-						<option value="YWC9">YWC9</option>
-						<option value="YWC10">YWC10</option>
-						<option value="YWC11">YWC11</option>
-						<option value="YWC12">YWC12</option>
-						<option value="YWC13">YWC13</option>
-						<option value="YWC14">YWC14</option>
-						<option value="YWC15">YWC15</option>
-						<option value="YWC16">YWC16</option>
-						<option value="YWC17">YWC17</option>
-						<option value="YWC18">YWC18</option>
-						<option value="YWC19">YWC19</option>
-						<option value="YWC20">YWC20</option>
-						<!-- <option value="SP">YWC20</option>
+					<span class="text-sm text-[#e9c46a]">Template</span>
+					<select
+						bind:value={branch}
+						on:change={changeBranch}
+						class="w-full p-4 rounded-lg bg-[#0b1a4a] text-white border border-[#c9a24b]/60 focus:outline-none focus:ring-2 focus:ring-[#e9c46a]"
+					>
 						<option value="PG">Web Programming</option>
 						<option value="CT">Web Content</option>
 						<option value="MK">Web Marketing</option>
-						<option value="DS">Web Design</option> -->
+						<option value="DS">Web Design</option>
 					</select>
 				</div>
 
@@ -223,15 +206,15 @@
 					<a
 						href={croppedImageWithFrame}
 						download="profile.png"
-						class="w-[160px] px-4 py-2 font-bold rounded-lg text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white"
+						class="w-[160px] px-4 py-2 font-bold rounded-full text-center bg-gradient-to-b from-[#f3dc9a] via-[#d4ae5a] to-[#a9802f] text-[#1a1203] shadow-[0_0_12px_rgba(233,196,106,0.35)]"
 						>Download</a
 					>
 
 					<button
-						class="p-[2px] rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+						class="p-[1.5px] rounded-full bg-gradient-to-b from-[#7fa8ff] to-[#2a4fb8]"
 						on:click={recropImage}
 					>
-						<div class="bg-[rgb(25,2,0)] text-white rounded-lg px-4 py-2 text-center w-[160px]">
+						<div class="bg-[#0b1f5c] text-white rounded-full px-4 py-2 text-center w-[160px]">
 							Recrop-Image
 						</div>
 					</button>
@@ -261,7 +244,7 @@
 		justify-content: center;
 		opacity: 0;
 		transition: opacity 0.3s ease;
-		border-radius: 0.5rem;
+		border-radius: 9999px;
 	}
 
 	.img-container:hover .hover-overlay {

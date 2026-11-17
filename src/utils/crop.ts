@@ -1,113 +1,37 @@
 import { Branch } from '$lib/constants/branch';
-import CTSrc from '../lib/assets/YWC20/CT.png';
-import DSScr from '../lib/assets/YWC20/DS.png';
-import MKSrc from '../lib/assets/YWC20/MK.png';
-import PGSrc from '../lib/assets/YWC20/PG.png';
-import SPSrc from '../lib/assets/YWC20/SP.png';
-import BGSrc from '../lib/assets/YWC20/SPBG.png';
-import CTBG from '../lib/assets/YWC20/CTBG.png';
-import DSBG from '../lib/assets/YWC20/DSBG.png';
-import MKBG from '../lib/assets/YWC20/MKBG.png';
-import PGBG from '../lib/assets/YWC20/PGBG.png';
-
-import YWC1 from '../lib/assets/ywc-reunion/1.png';
-import YWC2 from '../lib/assets/ywc-reunion/2.png';
-import YWC3 from '../lib/assets/ywc-reunion/3.png';
-import YWC4 from '../lib/assets/ywc-reunion/4.png';
-import YWC5 from '../lib/assets/ywc-reunion/5.png';
-import YWC6 from '../lib/assets/ywc-reunion/6.png';
-import YWC7 from '../lib/assets/ywc-reunion/7.png';
-import YWC8 from '../lib/assets/ywc-reunion/8.png';
-import YWC9 from '../lib/assets/ywc-reunion/9.png';
-import YWC10 from '../lib/assets/ywc-reunion/10.png';
-import YWC11 from '../lib/assets/ywc-reunion/11.png';
-import YWC12 from '../lib/assets/ywc-reunion/12.png';
-import YWC13 from '../lib/assets/ywc-reunion/13.png';
-import YWC14 from '../lib/assets/ywc-reunion/14.png';
-import YWC15 from '../lib/assets/ywc-reunion/15.png';
-import YWC16 from '../lib/assets/ywc-reunion/16.png';
-import YWC17 from '../lib/assets/ywc-reunion/17.png';
-import YWC18 from '../lib/assets/ywc-reunion/18.png';
-import YWC19 from '../lib/assets/ywc-reunion/19.png';
-import YWC20 from '../lib/assets/ywc-reunion/20.png';
+import CTSrc from '../lib/assets/YWC21/CT.png';
+import DSSrc from '../lib/assets/YWC21/DS.png';
+import MKSrc from '../lib/assets/YWC21/MK.png';
+import PGSrc from '../lib/assets/YWC21/PG.png';
 
 import resizeImageData from 'resize-image-data';
 
 const DEFAULT_WIDTH = 1440;
 const DEFAULT_HEIGHT = 1440;
-const OFFSET = ((1440 - 1280) / 2) * 0;
 
-async function selectImageFromBranch(branch: Branch) {
-	switch (branch) {
-		case Branch.MARKETING:
-			return await createImage(MKSrc);
-		case Branch.PROGRAMMING:
-			return await createImage(PGSrc);
-		case Branch.DESIGN:
-			return await createImage(DSScr);
-		case Branch.CONTENT:
-			return await createImage(CTSrc);
-		case Branch.SPECIAL:
-			return await createImage(SPSrc);
-		case Branch.YWC1:
-			return await createImage(YWC1);
-		case Branch.YWC2:
-			return await createImage(YWC2);
-		case Branch.YWC3:
-			return await createImage(YWC3);
-		case Branch.YWC4:
-			return await createImage(YWC4);
-		case Branch.YWC5:
-			return await createImage(YWC5);
-		case Branch.YWC6:
-			return await createImage(YWC6);
-		case Branch.YWC7:
-			return await createImage(YWC7);
-		case Branch.YWC8:
-			return await createImage(YWC8);
-		case Branch.YWC9:
-			return await createImage(YWC9);
-		case Branch.YWC10:
-			return await createImage(YWC10);
-		case Branch.YWC11:
-			return await createImage(YWC11);
-		case Branch.YWC12:
-			return await createImage(YWC12);
-		case Branch.YWC13:
-			return await createImage(YWC13);
-		case Branch.YWC14:
-			return await createImage(YWC14);
-		case Branch.YWC15:
-			return await createImage(YWC15);
-		case Branch.YWC16:
-			return await createImage(YWC16);
-		case Branch.YWC17:
-			return await createImage(YWC17);
-		case Branch.YWC18:
-			return await createImage(YWC18);
-		case Branch.YWC19:
-			return await createImage(YWC19);
-		case Branch.YWC20:
-			return await createImage(YWC20);
-		default:
-			return await createImage(SPSrc);
-	}
-}
-function selectBackgroundFromBranch(branch: Branch): string {
-	switch (branch) {
-		case Branch.MARKETING:
-			return MKBG;
-		case Branch.PROGRAMMING:
-			return PGBG;
-		case Branch.DESIGN:
-			return DSBG;
-		case Branch.CONTENT:
-			return CTBG;
-		case Branch.SPECIAL:
-			return BGSrc;
-		default:
-			return BGSrc; // fallback
-	}
+const FRAMES: Record<Branch, string> = {
+	[Branch.PROGRAMMING]: PGSrc,
+	[Branch.CONTENT]: CTSrc,
+	[Branch.MARKETING]: MKSrc,
+	[Branch.DESIGN]: DSSrc
+};
+
+// Navy night-sky gradient matching the YWC21 CI, shown behind the photo
+// when the user removes their background.
+function drawBackground(ctx: CanvasRenderingContext2D, width: number, height: number) {
+	const gradient = ctx.createRadialGradient(
+		width / 2,
+		height * 0.4,
+		0,
+		width / 2,
+		height / 2,
+		width * 0.75
+	);
+	gradient.addColorStop(0, '#3b6fd4');
+	gradient.addColorStop(0.45, '#14307a');
+	gradient.addColorStop(1, '#050d2b');
+	ctx.fillStyle = gradient;
+	ctx.fillRect(0, 0, width, height);
 }
 
 export function createImage(url: string): Promise<HTMLImageElement> {
@@ -229,14 +153,8 @@ export async function addFrame(
 	branch: Branch,
 	desiredSize = { width: DEFAULT_WIDTH, height: DEFAULT_HEIGHT }
 ) {
-	// Prepare image, bedge, and background
-	const [image, badge, background] = await Promise.all([
-		createImage(imageSrc),
-		selectImageFromBranch(branch),
-		createImage(selectBackgroundFromBranch(branch))
-	]);
+	const [image, frame] = await Promise.all([createImage(imageSrc), createImage(FRAMES[branch])]);
 
-	// Preoare background
 	const canvas = document.createElement('canvas');
 	const ctx = canvas.getContext('2d');
 
@@ -246,15 +164,24 @@ export async function addFrame(
 
 	canvas.width = desiredSize.width;
 	canvas.height = desiredSize.height;
-	ctx.drawImage(background, 0, 0, desiredSize.width, desiredSize.height);
-	ctx.drawImage(
-		image,
-		OFFSET,
-		OFFSET,
-		desiredSize.width - 2 * OFFSET * 0,
-		desiredSize.height - 2 * OFFSET * 0
+
+	// Clip photo + background to a circle so the corners outside the frame stay transparent
+	ctx.save();
+	ctx.beginPath();
+	ctx.arc(
+		desiredSize.width / 2,
+		desiredSize.height / 2,
+		Math.min(desiredSize.width, desiredSize.height) / 2,
+		0,
+		Math.PI * 2
 	);
-	ctx.drawImage(badge, 0, 0, desiredSize.width, desiredSize.height);
+	ctx.closePath();
+	ctx.clip();
+	drawBackground(ctx, desiredSize.width, desiredSize.height);
+	ctx.drawImage(image, 0, 0, desiredSize.width, desiredSize.height);
+	ctx.restore();
+
+	ctx.drawImage(frame, 0, 0, desiredSize.width, desiredSize.height);
 
 	// As Base64 string
 	return canvas.toDataURL('image/png', 1.0);
