@@ -4,8 +4,22 @@
 @tailwind utilities;
 
 body {
-	background-color: #050d2b;
-	background-image: radial-gradient(ellipse at 50% 30%, #14307a 0%, #0a1a4d 45%, #050d2b 100%);
+	background-color: var(--surface);
+	background-image: radial-gradient(ellipse at 50% 30%, var(--surface) 0%, var(--surface) 45%, var(--surface-deep) 140%);
 	background-attachment: fixed;
+	color: var(--ink-body);
+	font: var(--text-body);
 	min-height: 100vh;
+}
+
+:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
 }

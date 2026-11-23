@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Cropper from 'svelte-easy-crop';
-	import getCroppedImg, { addFrame, createImage } from '../utils/crop';
+	import getCroppedImg, { addFrame, createImage, FRAMES } from '../utils/crop';
 	import Button from '../components/Button.svelte';
 	import InputFile from '../components/InputFile.svelte';
 	import LoadingSrc from '$lib/assets/loading.svg';
@@ -18,6 +18,7 @@
 	let files: FileList;
 	let pixelCrop = { x: 0, y: 0, width: 0, height: 0 };
 	let branch: Branch = Branch.PROGRAMMING;
+	let showFrameOverlay = true;
 	let removeBg = false;
 	let removeBGStatus = false;
 	let enableRemoveBg = false;
@@ -138,11 +139,11 @@
 					alt="Cropped profile"
 					width="400"
 					height="400"
-					class="rounded-full aspect-square w-auto max-h-[360px] drop-shadow-[0_0_24px_rgba(233,196,106,0.25)]"
+					class="rounded-full aspect-square w-auto max-h-[360px] shadow-glow-gold"
 				/>
 
 				<div
-					class="hover-overlay text-center text-white text-lg font-semibold flex flex-col text-white"
+					class="hover-overlay text-center text-ink text-lg font-semibold flex flex-col"
 				>
 					<img src={reuploadSrc} alt="reupload" class="h-12 w-auto text-white [filter:invert(1)]" />
 					Upload Image
@@ -151,7 +152,7 @@
 			{#if enableRemoveBg}
 				<label class="flex w-full items-center gap-3 cursor-pointer select-none">
 					<div class="flex flex-col gap-2">
-						<span class="text-sm text-[#e9c46a]">Remove Background</span>
+						<span class="label uppercase text-gold-solid">Remove Background</span>
 						<div class="flex items-center justify-between gap-2 w-full">
 							<div class="relative">
 								<input
@@ -161,10 +162,10 @@
 									class="sr-only peer"
 								/>
 								<div
-									class="w-14 h-8 bg-[#1e3a8a] peer-checked:bg-[#c9a24b] transition-colors duration-300"
+									class="w-14 h-8 rounded-sm bg-surface-raised border border-ink-muted peer-checked:bg-accent peer-checked:border-accent peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-focus transition-colors duration-300"
 								/>
 								<div
-									class="absolute left-1 top-1 w-6 h-6 bg-white transition-transform duration-300 peer-checked:translate-x-5"
+									class="absolute left-1 top-1 w-6 h-6 rounded-xs bg-ink peer-checked:bg-on-accent transition-transform duration-300 peer-checked:translate-x-5"
 								/>
 							</div>
 							{#if removeBGStatus}
@@ -176,11 +177,12 @@
 			{/if}
 			<div class="flex w-full flex-col gap-2">
 				<div class="flex gap-2 flex-col w-full">
-					<span class="text-sm text-[#e9c46a]">Template</span>
+					<label for="template" class="label uppercase text-gold-solid">Template</label>
 					<select
+						id="template"
 						bind:value={branch}
 						on:change={changeBranch}
-						class="w-full p-4 rounded-lg bg-[#0b1a4a] text-white border border-[#c9a24b]/60 focus:outline-none focus:ring-2 focus:ring-[#e9c46a]"
+						class="w-full min-h-[44px] px-4 rounded-sm bg-surface-raised text-ink-body border border-ink-muted"
 					>
 						<option value="PG">Web Programming</option>
 						<option value="CT">Web Content</option>
@@ -202,22 +204,15 @@
 					/>
 				</div>
 
-				<div class="flex w-full justify-between">
+				<div class="flex w-full justify-between gap-3">
 					<a
 						href={croppedImageWithFrame}
 						download="profile.png"
-						class="w-[160px] px-4 py-2 font-bold rounded-full text-center bg-gradient-to-b from-[#f3dc9a] via-[#d4ae5a] to-[#a9802f] text-[#1a1203] shadow-[0_0_12px_rgba(233,196,106,0.35)]"
+						class="inline-flex items-center justify-center flex-1 min-h-[44px] px-6 rounded-sm bg-accent text-on-accent font-semibold transition-colors hover:bg-gold-highlight hover:shadow-glow-gold"
 						>Download</a
 					>
 
-					<button
-						class="p-[1.5px] rounded-full bg-gradient-to-b from-[#7fa8ff] to-[#2a4fb8]"
-						on:click={recropImage}
-					>
-						<div class="bg-[#0b1f5c] text-white rounded-full px-4 py-2 text-center w-[160px]">
-							Recrop-Image
-						</div>
-					</button>
+					<Button variant="outlined" class="flex-1" on:click={recropImage}>Recrop-Image</Button>
 				</div>
 			</div>
 		{:else}
@@ -226,8 +221,33 @@
 	</div>
 
 	{#if image && !croppedImage}
-		<Cropper {image} bind:crop bind:zoom on:cropcomplete={previewCrop} aspect={1} />
-		<div class="absolute bottom-4 z-50">
+		<div class="flex flex-col items-center gap-4 w-full max-w-[400px]">
+			<div class="relative w-full aspect-square overflow-hidden rounded-xs bg-surface-deep">
+				<Cropper {image} bind:crop bind:zoom on:cropcomplete={previewCrop} aspect={1} />
+				{#if showFrameOverlay}
+					<img
+						src={FRAMES[branch]}
+						alt=""
+						class="absolute inset-0 w-full h-full pointer-events-none select-none"
+					/>
+				{/if}
+			</div>
+			<label class="flex w-full items-center gap-3 cursor-pointer select-none">
+				<input type="checkbox" bind:checked={showFrameOverlay} class="w-5 h-5 [accent-color:var(--accent)]" />
+				<span class="text-ink-body">Show frame overlay</span>
+			</label>
+			<label class="flex w-full items-center gap-3">
+				<span class="label uppercase text-gold-solid">Zoom</span>
+				<input
+					type="range"
+					min="1"
+					max="3"
+					step="0.01"
+					bind:value={zoom}
+					aria-label="Zoom"
+					class="flex-1 [accent-color:var(--accent)]"
+				/>
+			</label>
 			<Button on:click={() => cropImage(image, pixelCrop)}>Crop image</Button>
 		</div>
 	{/if}
@@ -237,8 +257,7 @@
 	.hover-overlay {
 		position: absolute;
 		inset: 0;
-		background-color: rgba(0, 0, 0, 0.4);
-		color: white;
+		background-color: rgba(15, 25, 34, 0.55);
 		display: flex;
 		align-items: center;
 		justify-content: center;

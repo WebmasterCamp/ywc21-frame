@@ -16,11 +16,11 @@
 	{...$$restProps}
 	on:click
 	class={twMerge(
-		'focus:ring-4 focus:ring-[#e9c46a]/50 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none',
-		'font-bold transition-colors',
-		variant === 'solid' && 'text-[#1a1203] rounded-full bg-gradient-to-b from-[#f3dc9a] via-[#d4ae5a] to-[#a9802f] hover:brightness-110',
-		variant === 'outlined' &&
-			'text-[#e9c46a] border border-[#c9a24b] bg-transparent hover:border-[#e9c46a] hover:text-[#f3dc9a]',
+		'inline-flex items-center justify-center min-h-[44px] px-6 rounded-sm border-[1.5px] border-transparent',
+		'font-sans text-base leading-6 font-semibold transition-colors',
+		'disabled:opacity-[.45] disabled:cursor-not-allowed',
+		variant === 'solid' && 'bg-accent text-on-accent hover:bg-gold-highlight hover:shadow-glow-gold',
+		variant === 'outlined' && 'bg-transparent text-ink border-ink hover:bg-surface-raised',
 		className
 	)}><slot /></button
 >

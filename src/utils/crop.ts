@@ -9,7 +9,7 @@ import resizeImageData from 'resize-image-data';
 const DEFAULT_WIDTH = 1440;
 const DEFAULT_HEIGHT = 1440;
 
-const FRAMES: Record<Branch, string> = {
+export const FRAMES: Record<Branch, string> = {
 	[Branch.PROGRAMMING]: PGSrc,
 	[Branch.CONTENT]: CTSrc,
 	[Branch.MARKETING]: MKSrc,
