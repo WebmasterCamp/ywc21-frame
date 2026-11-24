@@ -261,13 +261,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		opacity: 0;
-		transition: opacity 0.3s ease;
+		transition: background-color 0.3s ease;
 		border-radius: 9999px;
+		cursor: pointer;
 	}
 
 	.img-container:hover .hover-overlay {
-		opacity: 1;
-		cursor: pointer;
+		background-color: rgba(15, 25, 34, 0.7);
 	}
 </style>
