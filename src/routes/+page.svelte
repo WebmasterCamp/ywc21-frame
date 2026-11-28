@@ -9,6 +9,7 @@
 	import { onMount } from 'svelte';
 	import { removeBackground } from '@imgly/background-removal';
 	import reuploadSrc from '$lib/assets/reupload.svg';
+	import { saveImage } from '../utils/save';
 
 	let image = '';
 	let croppedImage: string | null = null;
@@ -27,6 +28,7 @@
 	let processedImageWithBg = '';
 	let processedImageNoBg = '';
 	let fileInputRef: HTMLInputElement;
+	let showLongPressHint = false;
 
 	function onFileSelected() {
 		if (files && files[0]) {
@@ -106,6 +108,12 @@
 	function recropImage() {
 		croppedImage = null;
 		croppedImageWithFrame = null;
+	}
+
+	async function handleSaveImage() {
+		if (!croppedImageWithFrame) return;
+		const result = await saveImage(croppedImageWithFrame, 'profile.png');
+		showLongPressHint = result === 'needs-long-press';
 	}
 
 	function triggerFileInput() {
@@ -205,12 +213,7 @@
 				</div>
 
 				<div class="flex w-full justify-between gap-3">
-					<a
-						href={croppedImageWithFrame}
-						download="profile.png"
-						class="inline-flex items-center justify-center flex-1 min-h-[44px] px-6 rounded-sm bg-accent text-on-accent font-semibold transition-colors hover:bg-gold-highlight hover:shadow-glow-gold"
-						>Download</a
-					>
+					<Button class="flex-1" on:click={handleSaveImage}>Download</Button>
 
 					<Button variant="outlined" class="flex-1" on:click={recropImage}>Recrop-Image</Button>
 				</div>
@@ -219,6 +222,23 @@
 			<img src={LoadingSrc} alt="Loading" class="h-12 animate-spin [filter:invert(1)]" />
 		{/if}
 	</div>
+
+	{#if showLongPressHint && croppedImageWithFrame}
+		<div
+			class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-4 p-4 bg-surface-deep"
+			role="dialog"
+			aria-modal="true"
+			aria-label="Save image"
+		>
+			<p class="text-ink-body text-center">Press and hold the image, then save it to your photos.</p>
+			<img
+				src={croppedImageWithFrame}
+				alt="Cropped profile"
+				class="w-full max-w-[360px] aspect-square"
+			/>
+			<Button variant="outlined" on:click={() => (showLongPressHint = false)}>Close</Button>
+		</div>
+	{/if}
 
 	{#if image && !croppedImage}
 		<div class="flex flex-col items-center gap-4 w-full max-w-[400px]">
